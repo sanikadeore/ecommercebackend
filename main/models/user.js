@@ -4,11 +4,11 @@ const userSchema = new mongoose.Schema({
   name: { type: String, required: true },
   email: { type: String, unique: true, required: true },
   password: { type: String, required: true },
-  isVerified: { type: Boolean, default: false }, // Verification status
+  isVerified: { type: Boolean, default: false }, 
   phone: { type: String, required: true },
   address: { type: String, required: true },
-  cart: { type: mongoose.Schema.Types.ObjectId, ref: 'Cart' }, // Reference to the user's cart
-  orders: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Order' }], // List of user orders
+  cart: { type: mongoose.Schema.Types.ObjectId, ref: 'Cart' }, 
+  orders: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Order' }], 
   createdAt: { type: Date, default: Date.now }
 });
 
